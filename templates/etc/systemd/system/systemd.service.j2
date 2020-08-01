@@ -140,7 +140,9 @@ TimeoutSec={{ systemd_service[item].timeout_sec }}
 RestartSec={{ systemd_service[item].restart_sec | default('30') }}
 Restart={{ systemd_service[item].restart }}
 {% endif -%}
-
+{% if systemd_service[item].success_exit_status is defined %}
+SuccessExitStatus={{ systemd_service[item].success_exit_status }}
+{% endif -%}
 {% if systemd_service[item].environment is defined %}
 {% for k,v in systemd_service[item].environment.items() %}
 Environment="{{ k }}={{ v }}"

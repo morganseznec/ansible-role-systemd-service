@@ -41,6 +41,7 @@ systemd_target: {}
 #     exec_reload: "" or exec_reload: []
 #     restart: ""
 #     restart_sec: "30"
+#     success_exit_status: 143
 #     timeout_sec: ""
 #     wants: ""
 #     requires: ""
