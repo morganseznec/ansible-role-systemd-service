@@ -276,6 +276,13 @@ ExecStart={{ systemd_service[item].exec_start }}
 {% endif -%}
 {% endif -%}
 
+{% if systemd_service[item].start_limit_interval is defined %}
+StartLimitInterval={{ systemd_service[item].start_limit_interval }}
+{% endif -%}
+{% if systemd_service[item].start_limit_burst is defined %}
+StartLimitBurst={{ systemd_service[item].start_limit_burst }}
+{% endif -%}
+
 {% if systemd_service[item].standard_input is defined %}
 StandardInput={{ systemd_service[item].standard_input }}
 {% endif -%}

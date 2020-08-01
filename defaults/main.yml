@@ -39,6 +39,8 @@ systemd_target: {}
 #     exec_stop: "" or exec_stop: []
 #     exec_stop_post: "" or exec_stop_post: []
 #     exec_reload: "" or exec_reload: []
+#     start_limit_interval: 5
+#     start_limit_burst: 20
 #     restart: ""
 #     restart_sec: "30"
 #     timeout_sec: ""
